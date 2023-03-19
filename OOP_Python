@@ -1,0 +1,33 @@
+
+class Car:
+    vehicle = "car"
+    def __init__(self, speed, color, price):
+        #HERE THE "__" MAKE THE ATTRIBUTE SPEED PRIVATE
+        self.__speed = speed
+        self.color = color
+        self.price = price
+
+    def getSpeed(self,):
+        return self.__speed
+    
+    def setSpeed(self, value):
+        self.__speed = value
+
+    def start(self):
+        print("Car has started")
+
+    def stop(self):
+        print("car has stoped")
+        
+
+
+honda = Car(40, "red", 10000)
+
+
+honda.start()
+honda.stop()
+print(honda.getSpeed())
+honda.setSpeed(1111)
+print(honda.getSpeed())
+
+print(honda.color)
